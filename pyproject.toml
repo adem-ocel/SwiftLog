@@ -10,7 +10,7 @@ repository = "https://github.com/adem-ocel/SwiftLog"
 keywords = ["log", "logging", "logger"]
 packages = [
     {
-     include = "SwiftLog.py", from = "src" 
+     include = "swiftlog", from = "src" 
     }
 ]
 [tool.poetry.dependencies]
