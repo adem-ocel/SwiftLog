@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "SwiftLog"
-version = "1.0.0"
+version = "1.1.0"
 description = "Lightweight, modular logger that can write to console and file."
 authors = ["Adem <ademocel83@gmail.com>"]
 license = "MIT"
