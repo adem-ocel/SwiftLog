@@ -8,9 +8,7 @@ readme = "README.md"
 homepage = "https://github.com/adem-ocel/SwiftLog"
 repository = "https://github.com/adem-ocel/SwiftLog"
 keywords = ["log", "logging", "logger"]
-packages = [
-    {include = "swiftlog", from = "src" }
-]
+
 [tool.poetry.dependencies]
 python = "^3.9"
 
