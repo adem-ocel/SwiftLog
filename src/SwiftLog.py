@@ -3,11 +3,21 @@ from datetime import datetime
 
 
 class Logger:
-    def __init__(self, module_name: str):
+    def __init__(self, module_name: str, Write_on_it: bool = False):
+        """_summary_
+
+        Args:
+            module_name (str): log category and file name
+            Write_on_it (bool, optional): An option to delete and overwrite the file, or to continue writing without deleting. Defaults to False.
+        """
         self.module_name = module_name
         os.makedirs("logs", exist_ok=True)
-        with open(f"logs/{self.module_name}.log", "a", encoding="utf-8") as file:
-            file.write("")
+        if Write_on_it:
+            with open(f"logs/{self.module_name}.log", "w", encoding="utf-8") as file:
+                file.write("")
+        else:
+            with open(f"logs/{self.module_name}.log", "a", encoding="utf-8") as file:
+                file.write("")
 
     def log(self, level_name: str, message: str):
         with open(f"logs/{self.module_name}.log", "a", encoding="utf-8") as file:
