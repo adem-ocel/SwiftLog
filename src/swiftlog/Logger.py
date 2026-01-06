@@ -21,7 +21,7 @@ class Logger:
         with open(f"logs/{self.module_name}.log", "a", encoding="utf-8") as file:
             now: datetime = datetime.now()
             log: str = (
-                f"[{now.strftime('%Y-%m-%d')}] [{now.strftime('%H:%M:%S')}] [{level_name}] [{self.module_name}]: {message}\n"
+                f"[{now.strftime('%d-%m-%Y')}] [{now.strftime('%H:%M:%S')}] [{level_name}] [{self.module_name}]: {message}\n"
             )
             file.write(log)
             print(log.removesuffix("\n"))
